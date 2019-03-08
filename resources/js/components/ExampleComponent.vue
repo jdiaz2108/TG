@@ -1,5 +1,6 @@
 <template>
 
+
 <v-carousel height="700px"
             interval="8000">
     <v-carousel-item
