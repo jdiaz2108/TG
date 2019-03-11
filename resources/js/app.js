@@ -24,6 +24,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 Vue.component('l-navbar', require('./components/layouts/navbar.vue').default);
 
+Vue.component('l-leftpanel', require('./components/layouts/leftpanel.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -31,5 +33,19 @@ Vue.component('l-navbar', require('./components/layouts/navbar.vue').default);
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+	data() {
+    	return {
+    		drawer: false,
+    		isLoad: false
+    	}
+    },
+    created() {
+   		this.isLoad = true;
+   		console.log('creada');
+    },
+    mounted() {
+   		this.isLoad = true;
+   		console.log('montada');
+    }
 });

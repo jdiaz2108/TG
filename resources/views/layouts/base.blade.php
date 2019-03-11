@@ -128,11 +128,13 @@
         </style>
     </head>
     <body>
+        
  <div id="app">
 
+@include('layouts.navbar')
+<l-leftpanel></l-leftpanel>
 
-
-        <div class="container-fluid bg-primary m-0 p-0 sticky-top shadow">
+{{--         <div class="container-fluid bg-primary m-0 p-0 sticky-top shadow">
             <div class="container sticky-top">
                 <nav class="navbar navbar-expand-lg navbar-dark py-1 h4 sticky-top">
                     <a class="navbar-brand" href="#">
@@ -172,11 +174,12 @@
                     </div>
                 </nav>
             </div>
-        </div>
- 
-   <main>
-            @yield('content')
-        </main>
+        </div> --}}
+<div class="container-fluid" v-if="isLoad">
+    <div class="row">
+        @yield('content')
+    </div>
+</div>
 
 
 
@@ -288,10 +291,8 @@
 
 
         </footer>
-        
-          <main>
-        @include('layouts.navbar')
-        </main>
+
       </div>
+ 
     </body>
 </html>
